@@ -1,8 +1,6 @@
 import os
 import re
 
-albums = []
-artists = []
 def download_album_art(artist, album):
     fname = re.sub(r'\W+', '', artist+album)
     os.system(f'sacad "{artist}" "{album}" 1500 {fname}.png')
